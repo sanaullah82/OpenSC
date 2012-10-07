@@ -2,7 +2,6 @@
 set -ex
 OSX_RELEASE=${1:-10.6}
 INTEL_ONLY=${INTEL_ONLY:-no}
-test -x ./configure || ./bootstrap
 BUILDPATH=${PWD}
 case ${OSX_RELEASE} in
 	"10.5")
