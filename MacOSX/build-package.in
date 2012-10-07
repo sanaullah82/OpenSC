@@ -45,6 +45,7 @@ test ${OSX_RELEASE} = "10.5" && export LTLIB_LIBS="/Developer/SDKs/MacOSX10.5.sd
 case "${OSX_RELEASE}" in
 	"10.5") if test ${INTEL_ONLY} = "yes"; then required_arch="i386"; else required_arch="ppc7400"; fi ;;
 	"10.6") required_arch="x86_64" ;;
+	*) required_arch="x86_64" ;;
 esac
 
 if !(test -e src/libopensc/.libs/libopensc.dylib && (file src/libopensc/.libs/libopensc.dylib | grep $required_arch)); then
